@@ -1,4 +1,11 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,600&display=swap');
+
+body {
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
@@ -7,6 +14,7 @@
     text-decoration: none;
     box-sizing: border-box;
 }
+
 /*nav{
     position: fixed;
     top:0;
@@ -115,14 +123,14 @@ nav ul li a:hover{
     
 }
 */
-nav{
+nav {
     background: #0082e6;
     height: 10%;
     width: 100%;
 
 }
 
-label.logo{
+label.logo {
     color: white;
     font-size: 29px;
     line-height: 80px;
@@ -131,35 +139,45 @@ label.logo{
     margin-left: -15px;
 
 }
-nav ul{
+
+label.logo:hover {
+    color: aquamarine;
+    cursor: pointer;
+    transition: .1s;
+}
+
+nav ul {
     float: right;
     margin-right: 30px;
     margin-left: -50px;
 }
-nav ul li{
+
+nav ul li {
     display: inline-block;
     line-height: 80px;
     margin: 0 7px;
 
 
 }
-nav ul li a{
+
+nav ul li a {
     color: white;
     font-size: 16px;
-    padding: 7px 7px;
-    border-radius: 3px;
     text-transform: uppercase;
 
+
 }
 
-a.active,a:hover{
-    background: #1b9bff;
-    transition: .5s;
+a.active,
+a:hover {
+    font-weight: bold;
+    color: #ff00ff;
+
 }
 
-.checkbtn{
+.checkbtn {
     font-size: 30px;
-    color:white ;
+    color: white;
     float: right;
     line-height: 80px;
     margin-right: 40px;
@@ -167,26 +185,30 @@ a.active,a:hover{
     display: none;
 
 }
-#check{
+
+#check {
     display: none;
 
 }
-@media (max-width:952px){
-    label.logo{
+
+@media (max-width:952px) {
+    label.logo {
         font-size: 25px;
         padding-left: 33px;
 
     }
-    nav ul li a{
+
+    nav ul li a {
         font-size: 16px;
     }
 }
-@media (max-width:950px)
-{
-    .checkbtn{
+
+@media (max-width:950px) {
+    .checkbtn {
         display: block;
     }
-    ul{
+
+    ul {
         position: fixed;
         width: 78%;
         height: 100vh;
@@ -198,20 +220,24 @@ a.active,a:hover{
         z-index: 2;
     }
 
-    nav ul li{
+    nav ul li {
         display: block;
         margin: 50px 0;
         line-height: 30px;
         margin-left: -20%;
     }
-    nav ul li a{
+
+    nav ul li a {
         font-size: 20px;
     }
-    a:hover,a.active{
+
+    a:hover,
+    a.active {
         background: none;
         color: #0082e6;
     }
-    #check:checked	~ul{
+
+    #check:checked~ul {
         right: -100px;
     }
 
@@ -223,20 +249,23 @@ a.active,a:hover{
 
 
 /*Slider style    */
-.slider{
+.slider {
     position: relative;
     width: 100;
-    background:#3c3e50;
+    background: #3c3e50;
 }
-.myslider{
+
+.myslider {
     height: 655px;
     display: none;
     overflow: hidden;
 }
-.prev, .next{
+
+.prev,
+.next {
     position: absolute;
-    top:50%;
-    transform: translate(0,-50%);
+    top: 50%;
+    transform: translate(0, -50%);
     font-size: 50px;
     padding: 3px;
     margin: 10px;
@@ -245,22 +274,27 @@ a.active,a:hover{
     transition: 0.1s;
     user-select: none;
 }
-.prev:hover, .next:hover{
+
+.prev:hover,
+.next:hover {
     color: #3498db;
 }
-.next{
+
+.next {
     right: 0;
 }
-.dotsbox{
+
+.dotsbox {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
     bottom: 20px;
     cursor: pointer;
 }
-.dot{
+
+.dot {
     display: inline-block;
-    width: 15px ;
+    width: 15px;
     height: 15px;
     border: 3px solid rgb(47, 11, 193);
     border-radius: 50%;
@@ -269,28 +303,41 @@ a.active,a:hover{
     background-color: blue;
 }
 
-.active, .dot:hover{
+.active,
+.dot:hover {
     border-color: #3498db;
 }
-.fade{
-    -webkit-animation-name:fade ;
+
+.fade {
+    -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
     animation-duration: 1.5s;
 }
 
-@-webkit-keyframes fade{
-    from{opacity: 0.8}
-    to{opacity: 1}
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.8
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
-@keyframes fade{
-    from{opacity: 0.8}
-    to{opacity: 1}
+@keyframes fade {
+    from {
+        opacity: 0.8
+    }
+
+    to {
+        opacity: 1
+    }
 }
-.txt{
+
+.txt {
     position: absolute;
-    color: #fff;
+    color: #3f3f3f;
     letter-spacing: 2px;
     line-height: 35px;
     top: 40%;
@@ -298,38 +345,55 @@ a.active,a:hover{
     right: 15%;
     -webkit-animation-name: posi;
     -webkit-animation-duration: 2s;
-    animation-name:posi;
+    animation-name: posi;
     animation-duration: 2s;
     z-index: 1;
 }
-.txt button{
+
+.txt button {
     width: fit-content;
     padding: 10px;
     margin-top: 15px;
-    background-color:#007BFF; color: white;
+    background-color: #007BFF;
+    color: white;
     border: 3px solid blue;
     border-radius: 7px;
     cursor: pointer;
     font-weight: bold;
 }
-.txt button:hover{
-    background-color:black;
+
+.txt button:hover {
+    background-color: black;
     color: aqua;
 }
-@-webkit-keyframes posi{
-    from{left: 25%;}
-    to{left: 15%;}
+
+@-webkit-keyframes posi {
+    from {
+        left: 25%;
+    }
+
+    to {
+        left: 15%;
+    }
 }
-@keyframes posi{
-    from{left: 25%;}
-    to{left: 15%;}
+
+@keyframes posi {
+    from {
+        left: 25%;
+    }
+
+    to {
+        left: 15%;
+    }
 }
-.txt h1{
+
+.txt h1 {
     color: #3498db;
     font-weight: bold;
     margin-bottom: 20px;
 }
-.txt p{
+
+.txt p {
     font-family: sans-serif;
     font-weight: bold;
     font: 16px;
@@ -337,67 +401,296 @@ a.active,a:hover{
     margin-right: 10px;
     justify-content: center;
 }
-img{
-    transform: scale(1.5,1.5);
+
+img {
+    transform: scale(1.5, 1.5);
     -webkit-animation-name: zoomin;
     -webkit-animation-duration: 40s;
-     animation-name: zoomin;
+    animation-name: zoomin;
     animation-duration: 40s;
 }
-@-webkit-keyframes zoomin{
-    from{transform: scale(1,1);}
-    to{transform: scale(1.5,1.5);}
+
+@-webkit-keyframes zoomin {
+    from {
+        transform: scale(1, 1);
+    }
+
+    to {
+        transform: scale(1.5, 1.5);
+    }
 }
 
-@keyframes zoomin{
-    from{transform: scale(1,1);}
-    to{transform: scale(1.3,1.3);}
+@keyframes zoomin {
+    from {
+        transform: scale(1, 1);
+    }
+
+    to {
+        transform: scale(1.3, 1.3);
+    }
 }
 
 
-@media screen and (max-width:800px){
-    .myslider{
+@media screen and (max-width:800px) {
+    .myslider {
         height: 500px;
     }
-    .txt{
+
+    .txt {
         line-height: 25px;
         top: 60%;
         left: 40%;
         transform: translate(-50%, -50%);
         -webkit-animation-name: posi2;
-        -webkit-animation-duration:2s;
+        -webkit-animation-duration: 2s;
         animation-name: posi2;
-        animation-duration:2s;
-       justify-content: center;
+        animation-duration: 2s;
+        justify-content: center;
     }
+
     @-webkit-keyframes posi2 {
-        from{top: 35%;}
-        to{top: 50%;}
+        from {
+            top: 35%;
+        }
+
+        to {
+            top: 50%;
+        }
     }
+
     @keyframes posi2 {
-        from{top: 35%;}
-        to{top: 50%;}
+        from {
+            top: 35%;
+        }
+
+        to {
+            top: 50%;
+        }
     }
-    .txt h1{
+
+    .txt h1 {
         line-height: 35px;
         font-size: 40px;
         margin-right: -100px;
     }
-    .txt p{
+
+    .txt p {
         font-size: 13px;
         margin-left: 10px;
         margin-right: -100px;
     }
-    .txt button.btn{
-       width: fit-content;
-       padding-left: 5px;
-       padding-right: 5px;
-       padding-top: 7px;
-       padding-bottom: 7px;
+
+    .txt button.btn {
+        width: fit-content;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 7px;
+        padding-bottom: 7px;
     }
 }
-@media screen and (max-width:520px){
-    .txt h1{
+
+@media screen and (max-width:520px) {
+    .txt h1 {
         font-size: 30px;
     }
+}
+
+/*Assess with ease */
+#Assess {
+    
+    width: 75%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 60px;
+    padding-bottom: 0px;
+    margin: 0px auto;
+    color: #5a5a5a;
+
+
+}
+
+#Assess h1 {
+
+    font: Poppins, sans-serif;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 300;
+    padding-bottom: 10px;
+}
+
+#Assess h1::after {
+    content: '';
+    background: #750b0b;
+    display: block;
+    height: 1.5px;
+    /* width: cover; */
+    margin: 15px auto 5px;
+}
+
+#Assess p {
+     text-align: center !important;
+     color: #777;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 0px;
+    line-height: 22px;
+    padding: 0px;
+    font-size: 1.3rem;
+}
+
+.Assess1 {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon {
+    color: #5a5a5a;
+
+    flex-basis: 30%;
+    padding: 0px 12px 12px;
+    /* background-color: red; */
+
+}
+
+.fa-bolt,
+.fa-lock,
+.fa-circle-check {
+    color: #5a5a5a;
+    font-size: 4em;
+    margin: 1rem;
+}
+
+.Assess1 h3 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.Assess1 p {
+    color: #777;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 0px;
+
+}
+
+/* Connect section */
+.connect {
+    /* flex-basis: 10%; */
+    text-align: center;
+    background-attachment: fixed;
+    padding-bottom: -100px;
+    padding-top: 15px;
+    /* margin: 0px auto; */
+    color: #5a5a5a;
+}
+
+.connect h1::before {
+    content: '';
+    background: #8a6d6d;
+    width: 90%;
+    display: block;
+    height: 0.5px;
+    margin: 15px auto 5px;
+    margin-bottom: 20px;
+}
+
+.connect h1 {
+    font: Poppins, sans-serif;
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: 300;
+
+}
+
+.row-connect {
+    /* margin-top: 10px; */
+    display: flex;
+    justify-content: center;
+
+}
+
+.social-media {
+    font-size: 4.5em;
+    padding: 5px 30px 80px;
+}
+
+.fa-facebook {
+    color: #3b5998;
+
+
+}
+
+.fa-twitter {
+    color: #00aced;
+
+}
+
+.fa-google-plus-g {
+    color: #dd4b39;
+}
+
+.fa-instagram {
+    color: #517fa4;
+}
+
+.fa-youtube {
+    color: #bb0000;
+}
+
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-google-plus-g:hover,
+.fa-instagram:hover,
+.fa-youtube:hover {
+    color: #d5d5d5;
+}
+
+.footer {
+    background-color: #3f3f3f;
+    padding: 20px 0;
+}
+
+.footer p {
+    color: white;
+    text-align: center;
+    padding-bottom: 10px;
+    color: #d5d5d5;
+    font: 20px Poppins, sans-serif;
+}
+
+.footer p:after {
+    content: '';
+    background: #938f8f;
+    width: 80%;
+    display: block;
+    height: 1px;
+    margin: 3px auto 15px auto;
+}
+
+
+
+/* Responsive */
+@media(max-width:800px){
+    #Assess h1{
+        margin-top: -25px;
+        font-size: 40px;
+        line-height: 40px;
+    }
+    #Assess p{
+        font-size: 17px;
+    }
+
 }
