@@ -1,3 +1,14 @@
+
+const toggleButton=document.getElementsByClassName('toggle-button')[0]
+
+const navbarLinks=document.getElementsByClassName('navbar-links')[0]
+toggleButton.addEventListener('click',() => {
+    navbarLinks.classList.toggle('active1')
+});
+
+
+
+
 const myslide= document.querySelectorAll('.myslider'), dot=document.querySelectorAll('.dot');
 
 let counter=1;
@@ -41,4 +52,3 @@ function slidefun(n){
     myslide[counter-1].style.display="block";
     dot[counter-1].classList.add(activate);
 }
-
